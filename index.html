@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — Anotando... Diário Patrimonial</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-space: #060814;
+      --card-bg: rgba(17, 19, 27, 0.72);
+      --card-border: rgba(173, 198, 255, 0.22);
+      --card-border-glow: rgba(77, 142, 255, 0.45);
+      --primary: #adc6ff;
+      --primary-glow: #4d8eff;
+      --solar-amber: #f59e0b;
+      --emerald-glow: #34d399;
+      --text-main: #e1e2ed;
+      --text-muted: #9aa1b5;
+      --text-dim: #646b82;
+      --violet-orb: rgba(139, 92, 246, 0.16);
+      --blue-orb: rgba(59, 130, 246, 0.18);
+      --magenta-orb: rgba(236, 72, 153, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-space);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.65;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      padding: 32px 16px 80px 16px;
+    }
+    .orb { position: fixed; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: 0; }
+    .orb-1 { top: -100px; left: -80px; width: 440px; height: 440px; background: var(--blue-orb); }
+    .orb-2 { top: 35%; right: -100px; width: 480px; height: 480px; background: var(--violet-orb); }
+    .orb-3 { bottom: -60px; left: 15%; width: 420px; height: 420px; background: var(--magenta-orb); }
+    .container { max-width: 860px; margin: 0 auto; position: relative; z-index: 10; }
+    .brand-header { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 40px; padding-top: 10px; }
+    .brand-badge {
+      display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px;
+      background: rgba(52, 211, 153, 0.12); border: 1px solid rgba(52, 211, 153, 0.35);
+      color: var(--emerald-glow); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .brand-icon {
+      width: 64px; height: 64px; border-radius: 20px;
+      background: linear-gradient(135deg, rgba(77, 142, 255, 0.25), rgba(139, 92, 246, 0.15));
+      border: 1px solid var(--card-border-glow); display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px; box-shadow: 0 8px 32px rgba(77, 142, 255, 0.25); backdrop-filter: blur(12px);
+    }
+    .brand-icon span { font-size: 34px; color: var(--primary); text-shadow: 0 0 12px rgba(173, 198, 255, 0.8); }
+    h1.app-title {
+      font-family: 'Oswald', sans-serif; font-size: 38px; font-weight: 700; letter-spacing: 0.03em;
+      text-transform: uppercase; color: #ffffff; margin-bottom: 6px; text-shadow: 0 2px 20px rgba(255, 255, 255, 0.2);
+    }
+    .subtitle { color: var(--primary); font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .meta-bar { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 12px; font-size: 12px; color: var(--text-muted); }
+    .meta-tag { background: rgba(255, 255, 255, 0.05); padding: 4px 10px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08); }
+    .glass-card {
+      background: var(--card-bg); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--card-border); border-radius: 24px; padding: 36px 32px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08); margin-bottom: 28px;
+    }
+    @media (max-width: 640px) {
+      .glass-card { padding: 24px 18px; border-radius: 18px; }
+      h1.app-title { font-size: 28px; }
+    }
+    .section-title {
+      display: flex; align-items: center; gap: 10px; font-family: 'Oswald', sans-serif; font-size: 22px;
+      font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; color: #ffffff;
+      margin: 32px 0 14px 0; padding-bottom: 8px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .section-title:first-of-type { margin-top: 0; }
+    .section-title span.material-symbols-outlined { color: var(--primary); font-size: 24px; }
+    p { color: var(--text-main); font-size: 15px; margin-bottom: 14px; line-height: 1.7; }
+    strong { color: #ffffff; font-weight: 700; }
+    ul { list-style: none; padding-left: 0; margin-bottom: 18px; }
+    li { position: relative; padding-left: 26px; margin-bottom: 10px; font-size: 14.5px; color: var(--text-main); }
+    li::before { content: "•"; position: absolute; left: 8px; color: var(--primary); font-size: 18px; line-height: 1.2; }
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(77, 142, 255, 0.12), rgba(17, 19, 27, 0.8));
+      border: 1px solid rgba(77, 142, 255, 0.35); border-radius: 16px; padding: 18px 20px; margin: 18px 0;
+    }
+    .highlight-box.emerald {
+      background: linear-gradient(135deg, rgba(52, 211, 153, 0.12), rgba(17, 19, 27, 0.8)); border-color: rgba(52, 211, 153, 0.35);
+    }
+    .highlight-title { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; color: #ffffff; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .contact-card {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.12));
+      border: 1px solid rgba(173, 198, 255, 0.3); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; margin-top: 24px;
+    }
+    .contact-link {
+      display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border-radius: 999px;
+      background: var(--primary); color: #060814; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 4px 16px rgba(173, 198, 255, 0.35);
+    }
+    .contact-link:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(173, 198, 255, 0.55); background: #ffffff; }
+    footer { text-align: center; color: var(--text-dim); font-size: 12px; margin-top: 40px; }
+    code { background: rgba(255, 255, 255, 0.08); padding: 2px 6px; border-radius: 4px; font-size: 13px; color: var(--primary); }
+  </style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="container">
+    <header class="brand-header">
+      <div class="brand-badge">
+        <span class="material-symbols-outlined" style="font-size: 14px;">verified_user</span>
+        Privacidade 100% Offline Garantida
+      </div>
+      <div class="brand-icon">
+        <span class="material-symbols-outlined">history_edu</span>
+      </div>
+      <h1 class="app-title">Anotando...</h1>
+      <div class="subtitle">Diário Patrimonial • Liquid Glass Ledger</div>
+      <div class="meta-bar">
+        <span class="meta-tag">Pacote: <code>com.anotando.diario_patrimonial</code></span>
+        <span class="meta-tag">Última Atualização: 10 de Novembro de 2026</span>
+        <span class="meta-tag">Conformidade LGPD & Google Play</span>
+      </div>
+    </header>
+
+    <main class="glass-card">
+      <p>
+        A sua privacidade é um valor inegociável para nós. Esta <strong>Política de Privacidade</strong> detalha com total transparência como o aplicativo móvel <strong>Anotando... — Diário Patrimonial</strong> ("Aplicativo", "nós", "nosso") trata suas informações, seus lançamentos e as permissões do sistema operacional ao utilizar nossos serviços.
+      </p>
+
+      <h2 class="section-title">
+        <span class="material-symbols-outlined">lock</span>
+        1. Arquitetura 100% Offline (Local-First)
+      </h2>
+      <p>O <strong>Anotando</strong> foi construído sobre uma arquitetura estritamente <em>offline-first</em>. Isso significa que a sua vida financeira permanece sob o seu controle exclusivo:</p>
+      
+      <div class="highlight-box emerald">
+        <div class="highlight-title">
+          <span class="material-symbols-outlined" style="font-size: 18px; color: var(--emerald-glow);">shield</span>
+          Soberania e Isolamento dos seus Registros
+        </div>
+        <p style="margin-bottom: 0; font-size: 14px;">
+          Todas as suas transações, receitas, despesas, saldos patrimoniais, limites mensais, categorias e mensagens com o chat inteligente são salvos <strong>exclusivamente na memória interna local do seu smartphone</strong>.
+        </p>
+      </div>
+
+      <ul>
+        <li><strong>Sem Servidores Próprios:</strong> Nós não operamos nem mantemos bancos de dados ou servidores em nuvem que recebam seus dados financeiros.</li>
+        <li><strong>Sem Cadastro ou Senhas Bancárias:</strong> Você não precisa criar conta de usuário, fornecer CPF, números de cartão de crédito ou vincular suas senhas bancárias (open finance) para usufruir de todos os recursos.</li>
+      </ul>
+
+      <h2 class="section-title">
+        <span class="material-symbols-outlined">campaign</span>
+        2. Serviços de Terceiros e Anúncios Digitais
+      </h2>
+      <p>Para manter o aplicativo gratuito e disponível a todos, integramos a plataforma de publicidade móvel do <strong>Google AdMob</strong> (Google LLC).</p>
+
+      <div class="highlight-box">
+        <div class="highlight-title">
+          <span class="material-symbols-outlined" style="font-size: 18px; color: var(--primary);">info</span>
+          Dados Processados pelo Google AdMob
+        </div>
+        <p style="font-size: 14px;">O SDK oficial do Google AdMob pode coletar e processar automaticamente dados técnicos do aparelho para veiculação e mensuração de anúncios:</p>
+        <ul style="margin-bottom: 0;">
+          <li>Identificador de Publicidade do Google (Google Advertising ID / GAID);</li>
+          <li>Endereço IP (usado exclusivamente para localização geográfica aproximada a nível de cidade/região e combate a fraudes);</li>
+          <li>Métricas de diagnóstico de rede, interações com os anúncios (impressões e cliques) e modelo do dispositivo.</li>
+        </ul>
+      </div>
+      <p>
+        Para saber como o Google utiliza esses dados e gerenciar suas preferências de anúncios personalizados, consulte a <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: underline;">Política de Privacidade de Anúncios do Google</a>.
+      </p>
+
+      <h2 class="section-title">
+        <span class="material-symbols-outlined">tune</span>
+        3. Permissões Solicitadas no Android
+      </h2>
+      <p>O Aplicativo solicita apenas as permissões indispensáveis para o seu funcionamento:</p>
+      <ul>
+        <li><strong>Acesso à Rede e Internet (<code>android.permission.INTERNET</code>):</strong> Usada estritamente para o carregamento dos blocos de anúncios do Google AdMob e fontes tipográficas. Seus dados financeiros nunca saem do seu aparelho.</li>
+        <li><strong>Notificações Locais (<code>android.permission.POST_NOTIFICATIONS</code>):</strong> Usada para lembretes diários ou semanais de registro e alertas de contas a vencer. Todas as notificações são geradas 100% no dispositivo, sem notificações remotas.</li>
+        <li><strong>Reinicialização e Vibração (<code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>):</strong> Permite reagendar os lembretes locais caso o telefone seja reiniciado e fornece feedback tátil suave ao registrar lançamentos.</li>
+      </ul>
+
+      <h2 class="section-title">
+        <span class="material-symbols-outlined">backup</span>
+        4. Backup, Exportação e Restauração
+      </h2>
+      <p>O Aplicativo disponibiliza a funcionalidade de <strong>Backup Manual em Arquivo</strong>. Esse arquivo <code>.json</code> gerado contém seus registros para que você possa transferi-los para um novo aparelho quando desejar. O envio e armazenamento dessa cópia é gerido exclusivamente por você.</p>
+
+      <h2 class="section-title">
+        <span class="material-symbols-outlined">delete_forever</span>
+        5. Controle e Exclusão Definitiva dos Dados
+      </h2>
+      <p>Como não retemos nenhuma informação em servidores, você tem total autonomia para apagar seus dados a qualquer instante:</p>
+      <ul>
+        <li>Pela opção de <em>"Redefinir / Apagar Dados"</em> dentro das configurações do Aplicativo;</li>
+        <li>Limpando o armazenamento do aplicativo nas configurações do Android;</li>
+        <li>Ao desinstalar o aplicativo, todos os lançamentos salvos são permanentemente removidos do telefone.</li>
+      </ul>
+
+      <h2 class="section-title">
+        <span class="material-symbols-outlined">gavel</span>
+        6. Direitos do Titular (LGPD — Lei 13.709/2018)
+      </h2>
+      <p>Em respeito aos direitos garantidos pela Lei Geral de Proteção de Dados (LGPD), asseguramos que nenhum dado pessoal ou financeiro é comercializado, alugado ou transferido para terceiros. O acesso, retificação e exclusão são imediatos por meio do próprio uso do aparelho.</p>
+
+      <h2 class="section-title">
+        <span class="material-symbols-outlined">mail</span>
+        7. Contato e Suporte
+      </h2>
+      <p>Para esclarecer dúvidas sobre esta Política de Privacidade, dar sugestões ou solicitar suporte, entre em contato diretamente com o desenvolvedor:</p>
+
+      <div class="contact-card">
+        <span class="material-symbols-outlined" style="font-size: 32px; color: var(--primary);">support_agent</span>
+        <div>
+          <div style="font-weight: 700; color: #ffffff; font-size: 16px;">Canal de Atendimento ao Usuário</div>
+          <div style="color: var(--text-muted); font-size: 13px;">Desenvolvimento independente e conformidade de dados</div>
+        </div>
+        <a href="mailto:matheusantassis@gmail.com" class="contact-link">
+          <span class="material-symbols-outlined" style="font-size: 18px;">outgoing_mail</span>
+          matheusantassis@gmail.com
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 Anotando... Diário Patrimonial • Todos os direitos reservados.</p>
+      <p style="font-size: 11px; opacity: 0.6; margin-top: 4px;">Desenvolvido com padrão estético Liquid Glass Wealth Ledger.</p>
+    </footer>
+  </div>
+</body>
+</html>
