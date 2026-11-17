@@ -163,9 +163,10 @@ button:focus-visible {
 }
 
 .brand-link img {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 12px;
   border: 1px solid var(--glass-border-highlight);
   box-shadow: 0 4px 16px rgba(91, 140, 255, 0.25);
 }
