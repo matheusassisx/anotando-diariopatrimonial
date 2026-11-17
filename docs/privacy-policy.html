@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de Privacidade do Anotando... — Diário Patrimonial (v1.3.0+7): arquitetura offline-first, backup .anotando, Google Drive opt-in (drive.appdata), Google API Limited Use e LGPD.">
+  <meta name="theme-color" content="#0A1024">
+  <title>Política de Privacidade — Anotando... — Diário Patrimonial</title>
+  <link rel="icon" type="image/png" href="./assets/icon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body
+  data-title-pt="Política de Privacidade — Anotando... — Diário Patrimonial"
+  data-title-en="Privacy Policy — Anotando... — Wealth Diary">
+
+  <div class="ambient-orbs" aria-hidden="true">
+    <div class="orb orb-primary"></div>
+    <div class="orb orb-emerald"></div>
+    <div class="orb orb-violet"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand-link" href="./index.html">
+        <img src="./assets/icon-512.png" alt="Ícone do aplicativo Anotando..." data-alt-pt="Ícone do aplicativo Anotando..." data-alt-en="Anotando... app icon">
+        <span>
+          Anotando...
+          <span class="brand-sub" data-pt="Diário Patrimonial · v1.3.0" data-en="Wealth Diary · v1.3.0">Diário Patrimonial · v1.3.0</span>
+        </span>
+      </a>
+
+      <nav class="nav-actions" aria-label="Navegação principal">
+        <div class="nav-links">
+          <a class="nav-link" href="./index.html" data-pt="Início" data-en="Home">Início</a>
+          <a class="nav-link active" href="./privacy-policy.html" data-pt="Privacidade" data-en="Privacy">Privacidade</a>
+          <a class="nav-link" href="./terms.html" data-pt="Termos" data-en="Terms">Termos</a>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Selecionar idioma">
+          <button type="button" class="lang-btn active" data-lang-btn="pt-BR" aria-pressed="true">PT-BR</button>
+          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container container-doc">
+    <section class="glass-card doc-header">
+      <span class="pill pill-emerald" data-pt="LGPD &amp; Google API Limited Use" data-en="LGPD &amp; Google API Limited Use">LGPD &amp; Google API Limited Use</span>
+      <h1 data-pt="Política de Privacidade" data-en="Privacy Policy">Política de Privacidade</h1>
+      <p style="color: var(--on-surface-variant);"
+         data-pt="Esta Política de Privacidade explica de forma clara como o aplicativo Anotando... — Diário Patrimonial trata os seus dados financeiros, backups e permissões de dispositivo."
+         data-en="This Privacy Policy clearly explains how the Anotando... — Wealth Diary application handles your financial records, backups, and device permissions.">
+        Esta Política de Privacidade explica de forma clara como o aplicativo Anotando... — Diário Patrimonial trata os seus dados financeiros, backups e permissões de dispositivo.
+      </p>
+      <div class="doc-meta tabular">
+        <span data-pt="Última atualização: 17 de novembro de 2026" data-en="Last updated: November 17, 2026">Última atualização: 17 de novembro de 2026</span>
+        <span>·</span>
+        <span data-pt="Versão do App: 1.3.0+7" data-en="App Version: 1.3.0+7">Versão do App: 1.3.0+7</span>
+        <span>·</span>
+        <span><code>com.anotando.diario_patrimonial</code></span>
+      </div>
+    </section>
+
+    <article class="glass-card doc-card">
+      <h2 data-pt="1. Arquitetura 100% Offline-First" data-en="1. 100% Offline-First Architecture">1. Arquitetura 100% Offline-First</h2>
+      <p data-pt="O Anotando... — Diário Patrimonial foi projetado sob o princípio de soberania total do usuário:"
+         data-en="Anotando... — Wealth Diary is engineered around complete user data sovereignty:">
+        O Anotando... — Diário Patrimonial foi projetado sob o princípio de soberania total do usuário:
+      </p>
+      <ul>
+        <li data-pt-html="<strong>Armazenamento exclusivamente local:</strong> todas as receitas, despesas, saldos, metas mensais por categoria e ajustes permanecem gravados apenas na memória interna do seu aparelho."
+            data-en-html="<strong>Local-only storage:</strong> all income, expenses, balances, monthly category budgets, and adjustments are stored strictly in your device's internal storage.">
+          <strong>Armazenamento exclusivamente local:</strong> todas as receitas, despesas, saldos, metas mensais por categoria e ajustes permanecem gravados apenas na memória interna do seu aparelho.
+        </li>
+        <li data-pt-html="<strong>Sem servidores próprios:</strong> não operamos servidores de backend, bancos de dados em nuvem proprietários ou contas obrigatórias. Nós não coletamos, acessamos nem visualizamos seus registros financeiros."
+            data-en-html="<strong>No proprietary servers:</strong> we do not operate backend servers, proprietary cloud databases, or mandatory user accounts. We never collect, access, or view your financial records.">
+          <strong>Sem servidores próprios:</strong> não operamos servidores de backend, bancos de dados em nuvem proprietários ou contas obrigatórias. Nós não coletamos, acessamos nem visualizamos seus registros financeiros.
+        </li>
+        <li data-pt-html="<strong>Zero anúncios e zero rastreadores:</strong> o aplicativo não contém SDKs de publicidade (como AdMob), identificadores publicitários (GAID/IDFA) ou telemetria comportamental."
+            data-en-html="<strong>Zero ads and zero trackers:</strong> the app contains no advertising SDKs (such as AdMob), advertising identifiers (GAID/IDFA), or behavioral telemetry.">
+          <strong>Zero anúncios e zero rastreadores:</strong> o aplicativo não contém SDKs de publicidade (como AdMob), identificadores publicitários (GAID/IDFA) ou telemetria comportamental.
+        </li>
+      </ul>
+    </article>
+
+    <article class="glass-card doc-card">
+      <h2 data-pt="2. Backup Opcional no Google Drive (Opt-in &amp; Limited Use)" data-en="2. Optional Google Drive Backup (Opt-in &amp; Limited Use)">2. Backup Opcional no Google Drive (Opt-in &amp; Limited Use)</h2>
+      <p data-pt="Por padrão, nenhum dado sai do seu celular. Caso você escolha voluntariamente (opt-in) conectar sua Conta Google em Ajustes para ter uma cópia de segurança na nuvem, o aplicativo utiliza o Google Sign-In e a API do Google Drive exclusivamente nas seguintes condições:"
+         data-en="By default, no data leaves your device. Only if you voluntarily opt in by connecting your Google Account in Settings for cloud backup, the app uses Google Sign-In and the Google Drive API strictly under these terms:">
+        Por padrão, nenhum dado sai do seu celular. Caso você escolha voluntariamente (opt-in) conectar sua Conta Google em Ajustes para ter uma cópia de segurança na nuvem, o aplicativo utiliza o Google Sign-In e a API do Google Drive exclusivamente nas seguintes condições:
+      </p>
+      <ul>
+        <li data-pt-html="<strong>Escopo mínimo e isolado:</strong> solicitamos apenas o escopo <code>https://www.googleapis.com/auth/drive.appdata</code>, que concede acesso restrito à pasta oculta e isolada do próprio aplicativo (<code>appDataFolder</code>) dentro do seu Google Drive pessoal."
+            data-en-html="<strong>Minimal isolated scope:</strong> we only request the <code>https://www.googleapis.com/auth/drive.appdata</code> scope, which grants restricted access solely to the app's hidden isolated folder (<code>appDataFolder</code>) inside your personal Google Drive.">
+          <strong>Escopo mínimo e isolado:</strong> solicitamos apenas o escopo <code>https://www.googleapis.com/auth/drive.appdata</code>, que concede acesso restrito à pasta oculta e isolada do próprio aplicativo (<code>appDataFolder</code>) dentro do seu Google Drive pessoal.
+        </li>
+        <li data-pt-html="<strong>Finalidade exclusiva:</strong> o token OAuth é usado unicamente para salvar, listar, restaurar e excluir o arquivo de backup <code>.anotando</code> (<code>anotando_backup_latest.anotando</code>) quando acionado por você. O aplicativo não lê, modifica nem lista quaisquer outros arquivos, fotos ou pastas do seu Google Drive."
+            data-en-html="<strong>Exclusive purpose:</strong> the OAuth token is used solely to save, list, restore, and delete the <code>.anotando</code> backup file (<code>anotando_backup_latest.anotando</code>) when triggered by you. The app cannot read, modify, or list any other files, photos, or folders in your Google Drive.">
+          <strong>Finalidade exclusiva:</strong> o token OAuth é usado unicamente para salvar, listar, restaurar e excluir o arquivo de backup <code>.anotando</code> (<code>anotando_backup_latest.anotando</code>) quando acionado por você. O aplicativo não lê, modifica nem lista quaisquer outros arquivos, fotos ou pastas do seu Google Drive.
+        </li>
+        <li data-pt-html="<strong>Sem armazenamento intermediário:</strong> a comunicação ocorre diretamente entre o seu aparelho e os servidores oficiais do Google Drive via HTTPS. Nenhum servidor nosso intermedia ou armazena suas credenciais ou backups."
+            data-en-html="<strong>No intermediary servers:</strong> communication occurs directly between your device and official Google Drive servers over HTTPS. No developer server intermediates or stores your credentials or backups.">
+          <strong>Sem armazenamento intermediário:</strong> a comunicação ocorre diretamente entre o seu aparelho e os servidores oficiais do Google Drive via HTTPS. Nenhum servidor nosso intermedia ou armazena suas credenciais ou backups.
+        </li>
+      </ul>
+
+      <div class="callout"
+           data-pt-html="<strong>Conformidade com a Google API Services User Data Policy (Limited Use):</strong> O uso e a transferência para qualquer outro aplicativo das informações recebidas das APIs do Google pelo <em>Anotando... — Diário Patrimonial</em> obedecerão integralmente à <a href='https://developers.google.com/terms/api-services-user-data-policy' target='_blank' rel='noopener noreferrer'>Política de Dados de Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado (Limited Use). Os dados do Google Drive não são usados para publicidade, não são vendidos ou compartilhados com terceiros e não são lidos por humanos."
+           data-en-html="<strong>Google API Services User Data Policy (Limited Use) Disclosure:</strong> <em>Anotando... — Wealth Diary</em>'s use and transfer to any other app of information received from Google APIs will adhere strictly to the <a href='https://developers.google.com/terms/api-services-user-data-policy' target='_blank' rel='noopener noreferrer'>Google API Services User Data Policy</a>, including the Limited Use requirements. Google Drive data is never used for advertising, never sold or shared with third parties, and never read by humans.">
+        <strong>Conformidade com a Google API Services User Data Policy (Limited Use):</strong> O uso e a transferência para qualquer outro aplicativo das informações recebidas das APIs do Google pelo <em>Anotando... — Diário Patrimonial</em> obedecerão integralmente à <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Política de Dados de Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado (Limited Use). Os dados do Google Drive não são usados para publicidade, não são vendidos ou compartilhados com terceiros e não são lidos por humanos.
+      </div>
+    </article>
+
+    <article class="glass-card doc-card">
+      <h2 data-pt="3. Formato .anotando, Safety Snapshot e Exportação Excel" data-en="3. .anotando Format, Safety Snapshot, and Excel Export">3. Formato .anotando, Safety Snapshot e Exportação Excel</h2>
+      <ul>
+        <li data-pt-html="<strong>Backup seguro <code>.anotando</code>:</strong> os backups locais e do Google Drive utilizam o formato próprio <code>.anotando</code>, compactado com GZip e protegido com verificação de integridade criptográfica <code>SHA-256</code> contra corrupção de arquivo."
+            data-en-html="<strong>Secure <code>.anotando</code> backup:</strong> both local and Google Drive backups use the proprietary <code>.anotando</code> envelope, compressed with GZip and verified with a <code>SHA-256</code> cryptographic integrity hash against file corruption.">
+          <strong>Backup seguro <code>.anotando</code>:</strong> os backups locais e do Google Drive utilizam o formato próprio <code>.anotando</code>, compactado com GZip e protegido com verificação de integridade criptográfica <code>SHA-256</code> contra corrupção de arquivo.
+        </li>
+        <li data-pt-html="<strong>Safety Snapshot pré-restauração:</strong> antes de aplicar qualquer restauração de backup, o aplicativo cria automaticamente um Safety Snapshot local do estado atual para evitar perda acidental de dados."
+            data-en-html="<strong>Pre-restore Safety Snapshot:</strong> before applying any backup restore, the app automatically creates a local Safety Snapshot of your current state to prevent accidental data loss.">
+          <strong>Safety Snapshot pré-restauração:</strong> antes de aplicar qualquer restauração de backup, o aplicativo cria automaticamente um Safety Snapshot local do estado atual para evitar perda acidental de dados.
+        </li>
+        <li data-pt-html="<strong>Exportação para Excel e Resumo:</strong> você pode gerar localmente planilhas <code>.xlsx</code> ou resumos em texto. O arquivo é compartilhado exclusivamente por meio da folha de compartilhamento nativa do sistema operacional quando você solicita."
+            data-en-html="<strong>Excel and Summary Export:</strong> you can locally generate <code>.xlsx</code> spreadsheets or text summaries. Files are shared strictly through your operating system's native share sheet when requested by you.">
+          <strong>Exportação para Excel e Resumo:</strong> você pode gerar localmente planilhas <code>.xlsx</code> ou resumos em texto. O arquivo é compartilhado exclusivamente por meio da folha de compartilhamento nativa do sistema operacional quando você solicita.
+        </li>
+      </ul>
+    </article>
+
+    <article class="glass-card doc-card">
+      <h2 data-pt="4. Segurança (FLAG_SECURE) e Permissões do Dispositivo" data-en="4. Security (FLAG_SECURE) and Device Permissions">4. Segurança (FLAG_SECURE) e Permissões do Dispositivo</h2>
+      <ul>
+        <li data-pt-html="<strong>Proteção de Tela (<code>FLAG_SECURE</code>):</strong> opção configurável em Ajustes que instrui o Android a bloquear capturas de tela, gravações de vídeo e ocultar o conteúdo sensível na visualização de aplicativos recentes."
+            data-en-html="<strong>Screen Protection (<code>FLAG_SECURE</code>):</strong> configurable option in Settings that instructs Android to block screenshots, screen recording, and hide sensitive previews in the recent apps switcher.">
+          <strong>Proteção de Tela (<code>FLAG_SECURE</code>):</strong> opção configurável em Ajustes que instrui o Android a bloquear capturas de tela, gravações de vídeo e ocultar o conteúdo sensível na visualização de aplicativos recentes.
+        </li>
+        <li data-pt-html="<strong>Notificações (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>):</strong> usadas exclusivamente para agendar e exibir lembretes locais de vencimento no próprio aparelho, sem envio de notificações push por servidores."
+            data-en-html="<strong>Notifications (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>):</strong> used solely to schedule and display local due-date reminders on your device, with zero remote push servers.">
+          <strong>Notificações (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>):</strong> usadas exclusivamente para agendar e exibir lembretes locais de vencimento no próprio aparelho, sem envio de notificações push por servidores.
+        </li>
+        <li data-pt-html="<strong>Acesso à Internet (<code>INTERNET</code>):</strong> utilizado exclusivamente caso você ative o login opcional com Google Sign-In e o backup no Google Drive (<code>drive.appdata</code>)."
+            data-en-html="<strong>Internet Access (<code>INTERNET</code>):</strong> used exclusively if you enable optional Google Sign-In and Google Drive backup (<code>drive.appdata</code>).">
+          <strong>Acesso à Internet (<code>INTERNET</code>):</strong> utilizado exclusivamente caso você ative o login opcional com Google Sign-In e o backup no Google Drive (<code>drive.appdata</code>).
+        </li>
+      </ul>
+    </article>
+
+    <article class="glass-card doc-card">
+      <h2 data-pt="5. Retenção, Exclusão de Dados e Direitos (LGPD)" data-en="5. Data Retention, Deletion, and Rights (LGPD)">5. Retenção, Exclusão de Dados e Direitos (LGPD)</h2>
+      <p data-pt="Em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018), você mantém controle imediato sobre seus dados:"
+         data-en="In compliance with Brazil's General Data Protection Law (LGPD — Law No. 13.709/2018), you retain immediate control over your data:">
+        Em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018), você mantém controle imediato sobre seus dados:
+      </p>
+      <ul>
+        <li data-pt-html="<strong>Exclusão local:</strong> você pode apagar lançamentos individuais, redefinir o diário em Ajustes ou desinstalar o aplicativo para remover todos os dados locais de forma permanente."
+            data-en-html="<strong>Local deletion:</strong> you can delete individual entries, reset the ledger in Settings, or uninstall the app to permanently remove all local data.">
+          <strong>Exclusão local:</strong> você pode apagar lançamentos individuais, redefinir o diário em Ajustes ou desinstalar o aplicativo para remover todos os dados locais de forma permanente.
+        </li>
+        <li data-pt-html="<strong>Exclusão no Google Drive:</strong> caso tenha optado pelo backup na nuvem, você pode desconectar sua conta e excluir o arquivo <code>.anotando</code> diretamente na tela de Ajustes do aplicativo ou revogar o acesso do aplicativo nas configurações de segurança da sua Conta Google."
+            data-en-html="<strong>Google Drive deletion:</strong> if you opted into cloud backup, you can disconnect your account and delete the <code>.anotando</code> file directly in the app's Settings screen or revoke app access in your Google Account security settings.">
+          <strong>Exclusão no Google Drive:</strong> caso tenha optado pelo backup na nuvem, você pode desconectar sua conta e excluir o arquivo <code>.anotando</code> diretamente na tela de Ajustes do aplicativo ou revogar o acesso do aplicativo nas configurações de segurança da sua Conta Google.
+        </li>
+      </ul>
+    </article>
+
+    <article class="glass-card doc-card">
+      <h2 data-pt="6. Privacidade Infantil, Alterações e Contato" data-en="6. Children's Privacy, Updates, and Contact">6. Privacidade Infantil, Alterações e Contato</h2>
+      <p data-pt="O aplicativo não é direcionado a menores de 13 anos e não coleta intencionalmente dados pessoais de crianças. Podemos atualizar esta Política de Privacidade para refletir evoluções técnicas ou legais; a versão vigente estará sempre publicada nesta página."
+         data-en="The app is not directed at children under 13 and does not knowingly collect personal data from children. We may update this Privacy Policy to reflect technical or legal improvements; the current version will always be published on this page.">
+        O aplicativo não é direcionado a menores de 13 anos e não coleta intencionalmente dados pessoais de crianças. Podemos atualizar esta Política de Privacidade para refletir evoluções técnicas ou legais; a versão vigente estará sempre publicada nesta página.
+      </p>
+      <div class="callout callout-primary"
+           data-pt-html="<strong>Contato de Privacidade e Suporte:</strong> <a href='mailto:matheusantassis@gmail.com'>matheusantassis@gmail.com</a> · Consulte também os <a href='./terms.html'>Termos de Serviço</a>."
+           data-en-html="<strong>Privacy &amp; Support Contact:</strong> <a href='mailto:matheusantassis@gmail.com'>matheusantassis@gmail.com</a> · See also our <a href='./terms.html'>Terms of Service</a>.">
+        <strong>Contato de Privacidade e Suporte:</strong> <a href="mailto:matheusantassis@gmail.com">matheusantassis@gmail.com</a> · Consulte também os <a href="./terms.html">Termos de Serviço</a>.
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Anotando... — Diário Patrimonial</strong> · <span class="tabular">com.anotando.diario_patrimonial</span> · <span class="tabular">v1.3.0+7</span>
+      </div>
+      <div class="footer-links">
+        <a href="./index.html" data-pt="Início" data-en="Home">Início</a>
+        <a href="./privacy-policy.html" data-pt="Política de Privacidade" data-en="Privacy Policy">Política de Privacidade</a>
+        <a href="./terms.html" data-pt="Termos de Serviço" data-en="Terms of Service">Termos de Serviço</a>
+        <a href="https://github.com/matheusassisx/anotando-diariopatrimonial" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:matheusantassis@gmail.com">matheusantassis@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/i18n.js"></script>
+</body>
+</html>

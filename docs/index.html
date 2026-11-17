@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anotando... — Diário Patrimonial: aplicativo 100% offline-first de finanças pessoais, metas mensais por categoria, backup .anotando (GZip + SHA-256) e sincronização opcional no Google Drive.">
+  <meta name="theme-color" content="#0A1024">
+  <title>Anotando... — Diário Patrimonial (v1.3.0)</title>
+  <link rel="icon" type="image/png" href="./assets/icon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body
+  data-title-pt="Anotando... — Diário Patrimonial (v1.3.0)"
+  data-title-en="Anotando... — Wealth Diary (v1.3.0)">
+
+  <div class="ambient-orbs" aria-hidden="true">
+    <div class="orb orb-primary"></div>
+    <div class="orb orb-emerald"></div>
+    <div class="orb orb-violet"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand-link" href="./index.html">
+        <img src="./assets/icon-512.png" alt="Ícone do aplicativo Anotando..." data-alt-pt="Ícone do aplicativo Anotando..." data-alt-en="Anotando... app icon">
+        <span>
+          Anotando...
+          <span class="brand-sub" data-pt="Diário Patrimonial · v1.3.0" data-en="Wealth Diary · v1.3.0">Diário Patrimonial · v1.3.0</span>
+        </span>
+      </a>
+
+      <nav class="nav-actions" aria-label="Navegação principal">
+        <div class="nav-links">
+          <a class="nav-link active" href="./index.html" data-pt="Início" data-en="Home">Início</a>
+          <a class="nav-link" href="./privacy-policy.html" data-pt="Privacidade" data-en="Privacy">Privacidade</a>
+          <a class="nav-link" href="./terms.html" data-pt="Termos" data-en="Terms">Termos</a>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Selecionar idioma">
+          <button type="button" class="lang-btn active" data-lang-btn="pt-BR" aria-pressed="true">PT-BR</button>
+          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <span class="pill pill-emerald tabular" data-pt="100% Offline-First · v1.3.0+7" data-en="100% Offline-First · v1.3.0+7">100% Offline-First · v1.3.0+7</span>
+        <h1 data-pt-html="Seu patrimônio no seu celular, <span class='accent'>sem servidores</span> e sem anúncios."
+            data-en-html="Your wealth ledger on your device, <span class='accent'>no servers</span> and zero ads.">
+          Seu patrimônio no seu celular, <span class="accent">sem servidores</span> e sem anúncios.
+        </h1>
+        <p class="hero-lead"
+           data-pt="O Anotando... — Diário Patrimonial une controle financeiro simples, metas mensais por categoria, backup seguro .anotando (GZip + SHA-256), proteção de tela FLAG_SECURE e backup opcional no seu próprio Google Drive."
+           data-en="Anotando... — Wealth Diary combines straightforward personal finance tracking, monthly category budgets, secure .anotando (GZip + SHA-256) backups, FLAG_SECURE screen protection, and optional opt-in Google Drive backup.">
+          O Anotando... — Diário Patrimonial une controle financeiro simples, metas mensais por categoria, backup seguro .anotando (GZip + SHA-256), proteção de tela FLAG_SECURE e backup opcional no seu próprio Google Drive.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#galeria" data-pt="Ver Telas da v1.3.0" data-en="Explore v1.3.0 Screens">Ver Telas da v1.3.0</a>
+          <a class="btn btn-secondary" href="./privacy-policy.html" data-pt="Política de Privacidade" data-en="Privacy Policy">Política de Privacidade</a>
+        </div>
+
+        <div class="hero-highlights">
+          <span class="pill" data-pt="Envelope .anotando + SHA-256" data-en=".anotando Envelope + SHA-256">Envelope .anotando + SHA-256</span>
+          <span class="pill pill-amber" data-pt="Safety Snapshot automático" data-en="Automatic Safety Snapshot">Safety Snapshot automático</span>
+          <span class="pill" data-pt="Modo Idosos &amp; FLAG_SECURE" data-en="Senior Mode &amp; FLAG_SECURE">Modo Idosos &amp; FLAG_SECURE</span>
+        </div>
+      </div>
+
+      <div class="hero-device">
+        <div class="phone-frame">
+          <img
+            src="./assets/iphone17_1_geral.png"
+            alt="Tela Geral do Anotando... exibindo balanço mensal e carrossel de meses"
+            data-alt-pt="Tela Geral do Anotando... exibindo balanço mensal e carrossel de meses"
+            data-alt-en="Anotando... Overview screen showing monthly balance and month carousel">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="recursos">
+      <div class="section-header">
+        <span class="pill" data-pt="Arquitetura &amp; Recursos" data-en="Architecture &amp; Features">Arquitetura &amp; Recursos</span>
+        <h2 data-pt="Soberania total sobre os seus registros financeiros" data-en="Complete ownership of your financial records">Soberania total sobre os seus registros financeiros</h2>
+        <p data-pt="Projetado para funcionar 100% offline por padrão, com recursos avançados de integridade, privacidade e acessibilidade."
+           data-en="Built to work 100% offline by default, with advanced integrity, privacy, and accessibility safeguards.">
+          Projetado para funcionar 100% offline por padrão, com recursos avançados de integridade, privacidade e acessibilidade.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <article class="glass-card feature-card">
+          <div class="feature-icon emerald" aria-hidden="true">🔒</div>
+          <h3 data-pt="100% Offline-First" data-en="100% Offline-First">100% Offline-First</h3>
+          <p data-pt="Todos os lançamentos, saldos e metas ficam salvos apenas no armazenamento local do seu aparelho. Sem servidores próprios, sem contas obrigatórias e sem anúncios."
+             data-en="All transactions, balances, and budgets stay strictly on your device's local storage. No proprietary servers, no mandatory accounts, and zero ads.">
+            Todos os lançamentos, saldos e metas ficam salvos apenas no armazenamento local do seu aparelho. Sem servidores próprios, sem contas obrigatórias e sem anúncios.
+          </p>
+        </article>
+
+        <article class="glass-card feature-card">
+          <div class="feature-icon" aria-hidden="true">📊</div>
+          <h3 data-pt="Controle Patrimonial &amp; Metas" data-en="Wealth Ledger &amp; Budgets">Controle Patrimonial &amp; Metas</h3>
+          <p data-pt="Painel anual e mensal com fluxo de caixa, parcelas, recorrências, alertas de vencimento e metas mensais por categoria."
+             data-en="Annual and monthly dashboard with cash flow, installments, recurring entries, due-date alerts, and monthly category budgets.">
+            Painel anual e mensal com fluxo de caixa, parcelas, recorrências, alertas de vencimento e metas mensais por categoria.
+          </p>
+        </article>
+
+        <article class="glass-card feature-card">
+          <div class="feature-icon amber" aria-hidden="true">🛡️</div>
+          <h3 data-pt="Backup .anotando &amp; Safety Snapshot" data-en=".anotando Backup &amp; Safety Snapshot">Backup .anotando &amp; Safety Snapshot</h3>
+          <p data-pt="Formato próprio compactado com GZip e verificado por hash SHA-256. Antes de qualquer restauração, um Safety Snapshot local protege seu estado atual."
+             data-en="Proprietary format compressed with GZip and verified via SHA-256 hash. Before any restore, a local Safety Snapshot protects your current state.">
+            Formato próprio compactado com GZip e verificado por hash SHA-256. Antes de qualquer restauração, um Safety Snapshot local protege seu estado atual.
+          </p>
+        </article>
+
+        <article class="glass-card feature-card">
+          <div class="feature-icon" aria-hidden="true">☁️</div>
+          <h3 data-pt="Google Drive Opcional (Opt-in)" data-en="Optional Google Drive (Opt-in)">Google Drive Opcional (Opt-in)</h3>
+          <p data-pt="Conecte sua Conta Google apenas se desejar. O app usa exclusivamente o escopo isolado drive.appdata para salvar e restaurar seu .anotando na sua pasta oculta."
+             data-en="Connect your Google Account only if you choose to. The app strictly uses the isolated drive.appdata scope to save and restore your .anotando file in your hidden app folder.">
+            Conecte sua Conta Google apenas se desejar. O app usa exclusivamente o escopo isolado drive.appdata para salvar e restaurar seu .anotando na sua pasta oculta.
+          </p>
+        </article>
+
+        <article class="glass-card feature-card">
+          <div class="feature-icon emerald" aria-hidden="true">👁️</div>
+          <h3 data-pt="Proteção de Tela (FLAG_SECURE)" data-en="Screen Protection (FLAG_SECURE)">Proteção de Tela (FLAG_SECURE)</h3>
+          <p data-pt="Ative o bloqueio nativo do Android contra capturas de tela, gravações de vídeo e pré-visualização na lista de aplicativos recentes."
+             data-en="Enable native Android protection to block screenshots, screen recording, and sensitive previews in the recent apps switcher.">
+            Ative o bloqueio nativo do Android contra capturas de tela, gravações de vídeo e pré-visualização na lista de aplicativos recentes.
+          </p>
+        </article>
+
+        <article class="glass-card feature-card">
+          <div class="feature-icon" aria-hidden="true">♿</div>
+          <h3 data-pt="Modo Idosos &amp; Exportação Excel" data-en="Senior Mode &amp; Excel Export">Modo Idosos &amp; Exportação Excel</h3>
+          <p data-pt="Modo de leitura ampliada com fontes maiores e maior contraste, além de exportação local de planilhas Excel (.xlsx) e resumos."
+             data-en="Accessible reading mode with larger typography and enhanced contrast, plus local Excel (.xlsx) spreadsheet and summary exports.">
+            Modo de leitura ampliada com fontes maiores e maior contraste, além de exportação local de planilhas Excel (.xlsx) e resumos.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Interactive Screenshot Gallery -->
+    <section class="section" id="galeria">
+      <div class="section-header">
+        <span class="pill" data-pt="Galeria da v1.3.0+7" data-en="v1.3.0+7 Gallery">Galeria da v1.3.0+7</span>
+        <h2 data-pt="Interface Liquid Glass em cada detalhe" data-en="Liquid Glass interface in every detail">Interface Liquid Glass em cada detalhe</h2>
+        <p data-pt="Clique em qualquer captura abaixo para ampliar e navegar pelas principais telas do aplicativo."
+           data-en="Click any screenshot below to zoom in and browse the core screens of the app.">
+          Clique em qualquer captura abaixo para ampliar e navegar pelas principais telas do aplicativo.
+        </p>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <button type="button" class="glass-card shot-card" data-shot-index="0">
+          <div class="shot-thumb">
+            <img src="./assets/iphone17_1_geral.png" loading="lazy"
+                 alt="Tela Geral e Balanço Mensal"
+                 data-alt-pt="Tela Geral e Balanço Mensal"
+                 data-alt-en="Overview and Monthly Balance screen">
+          </div>
+          <div class="shot-meta">
+            <h3 data-pt="1. Geral &amp; Balanço Mensal" data-en="1. Overview &amp; Monthly Balance">1. Geral &amp; Balanço Mensal</h3>
+            <p data-pt="Carrossel dos 12 meses, saldo protagonista, receitas, despesas e teto mensal."
+               data-en="12-month carousel, featured balance, income, expenses, and monthly spending cap.">
+              Carrossel dos 12 meses, saldo protagonista, receitas, despesas e teto mensal.
+            </p>
+          </div>
+        </button>
+
+        <button type="button" class="glass-card shot-card" data-shot-index="1">
+          <div class="shot-thumb">
+            <img src="./assets/iphone17_2_geral_lancamentos.png" loading="lazy"
+                 alt="Lançamentos e Filtros Rápidos"
+                 data-alt-pt="Lançamentos e Filtros Rápidos"
+                 data-alt-en="Transactions and Quick Filters">
+          </div>
+          <div class="shot-meta">
+            <h3 data-pt="2. Lançamentos &amp; Filtros" data-en="2. Transactions &amp; Filters">2. Lançamentos &amp; Filtros</h3>
+            <p data-pt="Lista detalhada por status, categoria e tipo, com confirmação rápida e desfazer."
+               data-en="Detailed list by status, category, and type, with quick confirmation and undo.">
+              Lista detalhada por status, categoria e tipo, com confirmação rápida e desfazer.
+            </p>
+          </div>
+        </button>
+
+        <button type="button" class="glass-card shot-card" data-shot-index="2">
+          <div class="shot-thumb">
+            <img src="./assets/iphone17_3_analises.png" loading="lazy"
+                 alt="Análises Patrimoniais"
+                 data-alt-pt="Análises Patrimoniais"
+                 data-alt-en="Wealth Analytics">
+          </div>
+          <div class="shot-meta">
+            <h3 data-pt="3. Análises Patrimoniais" data-en="3. Wealth Analytics">3. Análises Patrimoniais</h3>
+            <p data-pt="Evolução anual, distribuição por categorias e comparativo de fluxo mensal."
+               data-en="Annual evolution, category breakdown, and monthly cash flow comparison.">
+              Evolução anual, distribuição por categorias e comparativo de fluxo mensal.
+            </p>
+          </div>
+        </button>
+
+        <button type="button" class="glass-card shot-card" data-shot-index="3">
+          <div class="shot-thumb">
+            <img src="./assets/iphone17_4_analises_metas.png" loading="lazy"
+                 alt="Metas Mensais por Categoria"
+                 data-alt-pt="Metas Mensais por Categoria"
+                 data-alt-en="Monthly Category Budgets">
+          </div>
+          <div class="shot-meta">
+            <h3 data-pt="4. Metas por Categoria" data-en="4. Category Budgets">4. Metas por Categoria</h3>
+            <p data-pt="Acompanhe limites mensais por categoria com indicadores visuais de consumo."
+               data-en="Track monthly limits per category with clear consumption progress indicators.">
+              Acompanhe limites mensais por categoria com indicadores visuais de consumo.
+            </p>
+          </div>
+        </button>
+
+        <button type="button" class="glass-card shot-card" data-shot-index="4">
+          <div class="shot-thumb">
+            <img src="./assets/iphone17_5_ajustes_backup.png" loading="lazy"
+                 alt="Ajustes de Backup .anotando e Google Drive"
+                 data-alt-pt="Ajustes de Backup .anotando e Google Drive"
+                 data-alt-en=".anotando Backup and Google Drive Settings">
+          </div>
+          <div class="shot-meta">
+            <h3 data-pt="5. Backup .anotando &amp; Drive" data-en="5. .anotando Backup &amp; Drive">5. Backup .anotando &amp; Drive</h3>
+            <p data-pt="Exportação/restauração .anotando, Safety Snapshot e Google Drive opt-in."
+               data-en=".anotando export/restore, Safety Snapshot, and optional opt-in Google Drive.">
+              Exportação/restauração .anotando, Safety Snapshot e Google Drive opt-in.
+            </p>
+          </div>
+        </button>
+
+        <button type="button" class="glass-card shot-card" data-shot-index="5">
+          <div class="shot-thumb">
+            <img src="./assets/iphone17_6_ajustes_seguranca.png" loading="lazy"
+                 alt="Ajustes de Segurança FLAG_SECURE e Modo Idosos"
+                 data-alt-pt="Ajustes de Segurança FLAG_SECURE e Modo Idosos"
+                 data-alt-en="Security FLAG_SECURE and Senior Mode Settings">
+          </div>
+          <div class="shot-meta">
+            <h3 data-pt="6. Segurança &amp; Acessibilidade" data-en="6. Security &amp; Accessibility">6. Segurança &amp; Acessibilidade</h3>
+            <p data-pt="Proteção de tela FLAG_SECURE, Modo Idosos, lembretes locais e exportação Excel."
+               data-en="FLAG_SECURE screen protection, Senior Mode, local reminders, and Excel export.">
+              Proteção de tela FLAG_SECURE, Modo Idosos, lembretes locais e exportação Excel.
+            </p>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Trust & Compliance Banner -->
+    <section class="section">
+      <div class="glass-card trust-banner">
+        <div>
+          <span class="pill pill-emerald" data-pt="Conformidade LGPD &amp; Google API Limited Use" data-en="LGPD &amp; Google API Limited Use Compliant">Conformidade LGPD &amp; Google API Limited Use</span>
+          <h2 style="margin-top: 12px; margin-bottom: 8px; font-size: 1.45rem;"
+              data-pt="Transparência verificável para usuários e revisores"
+              data-en="Verifiable transparency for users and reviewers">
+            Transparência verificável para usuários e revisores
+          </h2>
+          <p style="color: var(--on-surface-variant);"
+             data-pt="O acesso ao Google Drive (drive.appdata) é 100% opcional (opt-in) e utilizado exclusivamente para salvar, listar, restaurar e excluir o arquivo .anotando na pasta oculta do aplicativo na conta do próprio usuário."
+             data-en="Google Drive access (drive.appdata) is 100% optional (opt-in) and used exclusively to save, list, restore, and delete the .anotando backup file inside the app's hidden folder on the user's own account.">
+            O acesso ao Google Drive (drive.appdata) é 100% opcional (opt-in) e utilizado exclusivamente para salvar, listar, restaurar e excluir o arquivo .anotando na pasta oculta do aplicativo na conta do próprio usuário.
+          </p>
+        </div>
+        <div class="trust-actions">
+          <a class="btn btn-primary" href="./privacy-policy.html" data-pt="Ler Política de Privacidade" data-en="Read Privacy Policy">Ler Política de Privacidade</a>
+          <a class="btn btn-secondary" href="./terms.html" data-pt="Ler Termos de Serviço" data-en="Read Terms of Service">Ler Termos de Serviço</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+    <div class="glass-card lightbox-dialog">
+      <div class="lightbox-controls">
+        <strong id="lightboxTitle" style="font-size: 1rem;"></strong>
+        <button type="button" class="icon-btn" id="lightboxClose" data-pt="Fechar ✕" data-en="Close ✕">Fechar ✕</button>
+      </div>
+      <img id="lightboxImg" src="./assets/iphone17_1_geral.png" alt="">
+      <p id="lightboxDesc" style="font-size: 0.9rem; color: var(--on-surface-variant);"></p>
+      <div class="lightbox-controls">
+        <button type="button" class="icon-btn" id="lightboxPrev" data-pt="← Anterior" data-en="← Previous">← Anterior</button>
+        <span id="lightboxCounter" class="tabular" style="font-size: 0.85rem; color: var(--text-muted);">1 / 6</span>
+        <button type="button" class="icon-btn" id="lightboxNext" data-pt="Próxima →" data-en="Next →">Próxima →</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Anotando... — Diário Patrimonial</strong> · <span class="tabular">com.anotando.diario_patrimonial</span> · <span class="tabular">v1.3.0+7</span>
+      </div>
+      <div class="footer-links">
+        <a href="./index.html" data-pt="Início" data-en="Home">Início</a>
+        <a href="./privacy-policy.html" data-pt="Política de Privacidade" data-en="Privacy Policy">Política de Privacidade</a>
+        <a href="./terms.html" data-pt="Termos de Serviço" data-en="Terms of Service">Termos de Serviço</a>
+        <a href="https://github.com/matheusassisx/anotando-diariopatrimonial" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:matheusantassis@gmail.com">matheusantassis@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/i18n.js"></script>
+  <script>
+    (function () {
+      var shots = [
+        {
+          src: './assets/iphone17_1_geral.png',
+          ptTitle: '1. Geral & Balanço Mensal',
+          enTitle: '1. Overview & Monthly Balance',
+          ptDesc: 'Carrossel dos 12 meses, saldo protagonista, receitas, despesas e teto mensal.',
+          enDesc: '12-month carousel, featured balance, income, expenses, and monthly spending cap.'
+        },
+        {
+          src: './assets/iphone17_2_geral_lancamentos.png',
+          ptTitle: '2. Lançamentos & Filtros',
+          enTitle: '2. Transactions & Filters',
+          ptDesc: 'Lista detalhada por status, categoria e tipo, com confirmação rápida e desfazer.',
+          enDesc: 'Detailed list by status, category, and type, with quick confirmation and undo.'
+        },
+        {
+          src: './assets/iphone17_3_analises.png',
+          ptTitle: '3. Análises Patrimoniais',
+          enTitle: '3. Wealth Analytics',
+          ptDesc: 'Evolução anual, distribuição por categorias e comparativo de fluxo mensal.',
+          enDesc: 'Annual evolution, category breakdown, and monthly cash flow comparison.'
+        },
+        {
+          src: './assets/iphone17_4_analises_metas.png',
+          ptTitle: '4. Metas por Categoria',
+          enTitle: '4. Category Budgets',
+          ptDesc: 'Acompanhe limites mensais por categoria com indicadores visuais de consumo.',
+          enDesc: 'Track monthly limits per category with clear consumption progress indicators.'
+        },
+        {
+          src: './assets/iphone17_5_ajustes_backup.png',
+          ptTitle: '5. Backup .anotando & Drive',
+          enTitle: '5. .anotando Backup & Drive',
+          ptDesc: 'Exportação/restauração .anotando, Safety Snapshot e Google Drive opt-in.',
+          enDesc: '.anotando export/restore, Safety Snapshot, and optional opt-in Google Drive.'
+        },
+        {
+          src: './assets/iphone17_6_ajustes_seguranca.png',
+          ptTitle: '6. Segurança & Acessibilidade',
+          enTitle: '6. Security & Accessibility',
+          ptDesc: 'Proteção de tela FLAG_SECURE, Modo Idosos, lembretes locais e exportação Excel.',
+          enDesc: 'FLAG_SECURE screen protection, Senior Mode, local reminders, and Excel export.'
+        }
+      ];
+
+      var lightbox = document.getElementById('lightbox');
+      var imgEl = document.getElementById('lightboxImg');
+      var titleEl = document.getElementById('lightboxTitle');
+      var descEl = document.getElementById('lightboxDesc');
+      var counterEl = document.getElementById('lightboxCounter');
+      var current = 0;
+
+      function renderShot() {
+        var item = shots[current];
+        var isEn = window.anotandoGetLang && window.anotandoGetLang() === 'en';
+        imgEl.src = item.src;
+        imgEl.alt = isEn ? item.enTitle : item.ptTitle;
+        titleEl.textContent = isEn ? item.enTitle : item.ptTitle;
+        descEl.textContent = isEn ? item.enDesc : item.ptDesc;
+        counterEl.textContent = (current + 1) + ' / ' + shots.length;
+      }
+
+      function openLightbox(index) {
+        current = index;
+        renderShot();
+        lightbox.classList.add('open');
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+      }
+
+      var cards = document.querySelectorAll('[data-shot-index]');
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('click', function () {
+          var idx = parseInt(this.getAttribute('data-shot-index'), 10);
+          openLightbox(isNaN(idx) ? 0 : idx);
+        });
+      }
+
+      document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+      document.getElementById('lightboxPrev').addEventListener('click', function () {
+        current = (current - 1 + shots.length) % shots.length;
+        renderShot();
+      });
+      document.getElementById('lightboxNext').addEventListener('click', function () {
+        current = (current + 1) % shots.length;
+        renderShot();
+      });
+
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') {
+          current = (current - 1 + shots.length) % shots.length;
+          renderShot();
+        }
+        if (e.key === 'ArrowRight') {
+          current = (current + 1) % shots.length;
+          renderShot();
+        }
+      });
+
+      document.addEventListener('anotando:langchange', function () {
+        if (lightbox.classList.contains('open')) {
+          renderShot();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
