@@ -65,7 +65,7 @@
         <span>·</span>
         <span data-pt="Versão do App: 1.3.0+7" data-en="App Version: 1.3.0+7">Versão do App: 1.3.0+7</span>
         <span>·</span>
-        <span><code>com.anotando.diario_patrimonial</code></span>
+        <span>Android: <code>com.anotando.diario_patrimonial</code> · iOS: <code>com.anotando.diario-patrimonial</code></span>
       </div>
     </section>
 
@@ -102,9 +102,13 @@
             data-en-html="<strong>Minimal isolated scope:</strong> we only request the <code>https://www.googleapis.com/auth/drive.appdata</code> scope, which grants restricted access solely to the app's hidden isolated folder (<code>appDataFolder</code>) inside your personal Google Drive.">
           <strong>Escopo mínimo e isolado:</strong> solicitamos apenas o escopo <code>https://www.googleapis.com/auth/drive.appdata</code>, que concede acesso restrito à pasta oculta e isolada do próprio aplicativo (<code>appDataFolder</code>) dentro do seu Google Drive pessoal.
         </li>
-        <li data-pt-html="<strong>Finalidade exclusiva:</strong> o token OAuth é usado unicamente para salvar, listar, restaurar e excluir o arquivo de backup <code>.anotando</code> (<code>anotando_backup_latest.anotando</code>) quando acionado por você. O aplicativo não lê, modifica nem lista quaisquer outros arquivos, fotos ou pastas do seu Google Drive."
-            data-en-html="<strong>Exclusive purpose:</strong> the OAuth token is used solely to save, list, restore, and delete the <code>.anotando</code> backup file (<code>anotando_backup_latest.anotando</code>) when triggered by you. The app cannot read, modify, or list any other files, photos, or folders in your Google Drive.">
-          <strong>Finalidade exclusiva:</strong> o token OAuth é usado unicamente para salvar, listar, restaurar e excluir o arquivo de backup <code>.anotando</code> (<code>anotando_backup_latest.anotando</code>) quando acionado por você. O aplicativo não lê, modifica nem lista quaisquer outros arquivos, fotos ou pastas do seu Google Drive.
+        <li data-pt-html="<strong>Backup manual e backup automático em nuvem (opt-in):</strong> por padrão, o envio ocorre apenas quando você aciona manualmente. Caso você também ative voluntariamente a opção <strong>Backup automático</strong> em Ajustes, o aplicativo sincroniza automaticamente o arquivo <code>anotando_backup_latest.anotando</code> na pasta <code>appDataFolder</code> após alterações nos registros financeiros, podendo essa sincronização automática ser desativada a qualquer momento."
+            data-en-html="<strong>Manual and automatic cloud backup (opt-in):</strong> by default, uploads occur only when you trigger them manually. If you also voluntarily turn on <strong>Automatic backup</strong> in Settings, the app automatically syncs the <code>anotando_backup_latest.anotando</code> file to your <code>appDataFolder</code> after changes to financial records, and you can disable this automatic sync at any time.">
+          <strong>Backup manual e backup automático em nuvem (opt-in):</strong> por padrão, o envio ocorre apenas quando você aciona manualmente. Caso você também ative voluntariamente a opção <strong>Backup automático</strong> em Ajustes, o aplicativo sincroniza automaticamente o arquivo <code>anotando_backup_latest.anotando</code> na pasta <code>appDataFolder</code> após alterações nos registros financeiros, podendo essa sincronização automática ser desativada a qualquer momento.
+        </li>
+        <li data-pt-html="<strong>Finalidade exclusiva:</strong> o token OAuth é usado unicamente para salvar, listar, restaurar e excluir o arquivo de backup <code>.anotando</code> (<code>anotando_backup_latest.anotando</code>) na pasta privada do app. O aplicativo não lê, modifica nem lista quaisquer outros arquivos, fotos ou pastas do seu Google Drive."
+            data-en-html="<strong>Exclusive purpose:</strong> the OAuth token is used solely to save, list, restore, and delete the <code>.anotando</code> backup file (<code>anotando_backup_latest.anotando</code>) inside the app's private folder. The app cannot read, modify, or list any other files, photos, or folders in your Google Drive.">
+          <strong>Finalidade exclusiva:</strong> o token OAuth é usado unicamente para salvar, listar, restaurar e excluir o arquivo de backup <code>.anotando</code> (<code>anotando_backup_latest.anotando</code>) na pasta privada do app. O aplicativo não lê, modifica nem lista quaisquer outros arquivos, fotos ou pastas do seu Google Drive.
         </li>
         <li data-pt-html="<strong>Sem armazenamento intermediário:</strong> a comunicação ocorre diretamente entre o seu aparelho e os servidores oficiais do Google Drive via HTTPS. Nenhum servidor nosso intermedia ou armazena suas credenciais ou backups."
             data-en-html="<strong>No intermediary servers:</strong> communication occurs directly between your device and official Google Drive servers over HTTPS. No developer server intermediates or stores your credentials or backups.">
@@ -138,15 +142,19 @@
     </article>
 
     <article class="glass-card doc-card">
-      <h2 data-pt="4. Segurança (FLAG_SECURE) e Permissões do Dispositivo" data-en="4. Security (FLAG_SECURE) and Device Permissions">4. Segurança (FLAG_SECURE) e Permissões do Dispositivo</h2>
+      <h2 data-pt="4. Segurança Visual e Permissões do Dispositivo" data-en="4. Visual Security and Device Permissions">4. Segurança Visual e Permissões do Dispositivo</h2>
       <ul>
-        <li data-pt-html="<strong>Proteção de Tela (<code>FLAG_SECURE</code>):</strong> opção configurável em Ajustes que instrui o Android a bloquear capturas de tela, gravações de vídeo e ocultar o conteúdo sensível na visualização de aplicativos recentes."
-            data-en-html="<strong>Screen Protection (<code>FLAG_SECURE</code>):</strong> configurable option in Settings that instructs Android to block screenshots, screen recording, and hide sensitive previews in the recent apps switcher.">
-          <strong>Proteção de Tela (<code>FLAG_SECURE</code>):</strong> opção configurável em Ajustes que instrui o Android a bloquear capturas de tela, gravações de vídeo e ocultar o conteúdo sensível na visualização de aplicativos recentes.
+        <li data-pt-html="<strong>Proteção de Tela no Android (<code>FLAG_SECURE</code> — <code>com.anotando.diario_patrimonial</code>):</strong> opção configurável em Ajustes que instrui o Android a bloquear capturas de tela (prints), gravações de vídeo e ocultar o conteúdo sensível na lista de aplicativos recentes."
+            data-en-html="<strong>Screen Protection on Android (<code>FLAG_SECURE</code> — <code>com.anotando.diario_patrimonial</code>):</strong> configurable option in Settings that instructs Android to block screenshots, screen recordings, and hide sensitive previews in the recent apps list.">
+          <strong>Proteção de Tela no Android (<code>FLAG_SECURE</code> — <code>com.anotando.diario_patrimonial</code>):</strong> opção configurável em Ajustes que instrui o Android a bloquear capturas de tela (prints), gravações de vídeo e ocultar o conteúdo sensível na lista de aplicativos recentes.
         </li>
-        <li data-pt-html="<strong>Notificações (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>):</strong> usadas exclusivamente para agendar e exibir lembretes locais de vencimento no próprio aparelho, sem envio de notificações push por servidores."
-            data-en-html="<strong>Notifications (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>):</strong> used solely to schedule and display local due-date reminders on your device, with zero remote push servers.">
-          <strong>Notificações (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>):</strong> usadas exclusivamente para agendar e exibir lembretes locais de vencimento no próprio aparelho, sem envio de notificações push por servidores.
+        <li data-pt-html="<strong>Proteção no Seletor de Multitarefa no iOS (<code>com.anotando.diario-patrimonial</code>):</strong> quando ativada em Ajustes, oculta a prévia financeira exibindo uma camada visual escura (<code>#0A1024</code>) sobre a tela sempre que o aplicativo fica inativo ou em segundo plano."
+            data-en-html="<strong>App Switcher Privacy Protection on iOS (<code>com.anotando.diario-patrimonial</code>):</strong> when enabled in Settings, hides financial previews in the multitasking switcher behind a dark visual overlay (<code>#0A1024</code>) whenever the app becomes inactive or enters the background.">
+          <strong>Proteção no Seletor de Multitarefa no iOS (<code>com.anotando.diario-patrimonial</code>):</strong> quando ativada em Ajustes, oculta a prévia financeira exibindo uma camada visual escura (<code>#0A1024</code>) sobre a tela sempre que o aplicativo fica inativo ou em segundo plano.
+        </li>
+        <li data-pt-html="<strong>Notificações locais:</strong> no Android (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>) e no iOS (<code>UNUserNotificationCenter</code>), usadas exclusivamente para agendar e exibir lembretes locais de vencimento e lembrete diário no próprio aparelho, sem servidores de push."
+            data-en-html="<strong>Local notifications:</strong> on Android (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>) and iOS (<code>UNUserNotificationCenter</code>), used solely to schedule and display local due-date and daily reminders on your device, with zero push servers.">
+          <strong>Notificações locais:</strong> no Android (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>) e no iOS (<code>UNUserNotificationCenter</code>), usadas exclusivamente para agendar e exibir lembretes locais de vencimento e lembrete diário no próprio aparelho, sem servidores de push.
         </li>
         <li data-pt-html="<strong>Acesso à Internet (<code>INTERNET</code>):</strong> utilizado exclusivamente caso você ative o login opcional com Google Sign-In e o backup no Google Drive (<code>drive.appdata</code>)."
             data-en-html="<strong>Internet Access (<code>INTERNET</code>):</strong> used exclusively if you enable optional Google Sign-In and Google Drive backup (<code>drive.appdata</code>).">
@@ -162,13 +170,13 @@
         Em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018), você mantém controle imediato sobre seus dados:
       </p>
       <ul>
-        <li data-pt-html="<strong>Exclusão local:</strong> você pode apagar lançamentos individuais, redefinir o diário em Ajustes ou desinstalar o aplicativo para remover todos os dados locais de forma permanente."
-            data-en-html="<strong>Local deletion:</strong> you can delete individual entries, reset the ledger in Settings, or uninstall the app to permanently remove all local data.">
-          <strong>Exclusão local:</strong> você pode apagar lançamentos individuais, redefinir o diário em Ajustes ou desinstalar o aplicativo para remover todos os dados locais de forma permanente.
+        <li data-pt-html="<strong>Exclusão local:</strong> você pode apagar lançamentos individuais a qualquer momento. O botão <strong>Zerar todos os lançamentos</strong> em Ajustes apaga os lançamentos financeiros, mantendo cartões, orçamentos, ajustes e eventuais Safety Snapshots locais. A remoção total e permanente de todos os dados locais ocorre ao limpar os dados do aplicativo nas configurações do sistema ou ao desinstalar o aplicativo."
+            data-en-html="<strong>Local deletion:</strong> you can delete individual entries at any time. The <strong>Zerar todos os lançamentos</strong> (Clear all entries) button in Settings erases financial transactions while keeping saved credit cards, budgets, adjustments, and local Safety Snapshots. Complete and permanent removal of all local data occurs when clearing app data in your operating system settings or uninstalling the app.">
+          <strong>Exclusão local:</strong> você pode apagar lançamentos individuais a qualquer momento. O botão <strong>Zerar todos os lançamentos</strong> em Ajustes apaga os lançamentos financeiros, mantendo cartões, orçamentos, ajustes e eventuais Safety Snapshots locais. A remoção total e permanente de todos os dados locais ocorre ao limpar os dados do aplicativo nas configurações do sistema ou ao desinstalar o aplicativo.
         </li>
-        <li data-pt-html="<strong>Exclusão no Google Drive:</strong> caso tenha optado pelo backup na nuvem, você pode desconectar sua conta e excluir o arquivo <code>.anotando</code> diretamente na tela de Ajustes do aplicativo ou revogar o acesso do aplicativo nas configurações de segurança da sua Conta Google."
-            data-en-html="<strong>Google Drive deletion:</strong> if you opted into cloud backup, you can disconnect your account and delete the <code>.anotando</code> file directly in the app's Settings screen or revoke app access in your Google Account security settings.">
-          <strong>Exclusão no Google Drive:</strong> caso tenha optado pelo backup na nuvem, você pode desconectar sua conta e excluir o arquivo <code>.anotando</code> diretamente na tela de Ajustes do aplicativo ou revogar o acesso do aplicativo nas configurações de segurança da sua Conta Google.
+        <li data-pt-html="<strong>Exclusão no Google Drive:</strong> caso tenha optado pelo backup na nuvem, você pode desconectar sua conta, desativar o backup automático e excluir o arquivo <code>.anotando</code> diretamente na tela de Ajustes do aplicativo ou revogar o acesso do aplicativo nas configurações de segurança da sua Conta Google."
+            data-en-html="<strong>Google Drive deletion:</strong> if you opted into cloud backup, you can disconnect your account, turn off automatic backup, and delete the <code>.anotando</code> file directly in the app's Settings screen or revoke app access in your Google Account security settings.">
+          <strong>Exclusão no Google Drive:</strong> caso tenha optado pelo backup na nuvem, você pode desconectar sua conta, desativar o backup automático e excluir o arquivo <code>.anotando</code> diretamente na tela de Ajustes do aplicativo ou revogar o acesso do aplicativo nas configurações de segurança da sua Conta Google.
         </li>
       </ul>
     </article>
@@ -190,7 +198,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <strong>Anotando: Controle de Gastos</strong> · <span class="tabular">com.anotando.diario_patrimonial</span> · <span class="tabular">v1.3.0+7</span>
+        <strong>Anotando: Controle de Gastos</strong> · <span class="tabular">com.anotando.diario_patrimonial</span> · <span class="tabular">com.anotando.diario-patrimonial</span> · <span class="tabular">v1.3.0+7</span>
       </div>
       <div class="footer-links">
         <a href="./index.html" data-pt="Início" data-en="Home">Início</a>
